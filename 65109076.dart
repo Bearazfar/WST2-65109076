@@ -1,3 +1,4 @@
+//Step 1
 
 class Person {
   String _name;
@@ -5,6 +6,8 @@ class Person {
   Person(this._name);
 
   String get name => _name;
+  set name(String value) => _name = value;
+
 }
 
 class Engine {
@@ -14,7 +17,10 @@ class Engine {
   Engine(this._model, this._speed); 
 
   String get model => _model;
+  set model(String value) => _model = value;
+
   int get speed => _speed;
+  set speed(int value) => _speed = value;
 
   void displayEngineInfo() {
     print('Engine: $_model \nMax Speed: $_speed km/h');
@@ -52,6 +58,8 @@ class Car {
   }
 }
 
+//Step 2
+
 class Honda extends Car {
   String _color; 
 
@@ -63,7 +71,7 @@ class Honda extends Car {
 
   @override
   void run() {
-    print('Driving at 120 km/h');
+    print('ความเร็วในการขับ 120 km/h');
   }
 
   @override
@@ -79,12 +87,11 @@ void main() {
   Car hondaCivic = Car('Honda', 'Civic', suchakree, hondaEngine);
   Honda myHonda = Honda('Honda', 'Accord', suchakree, hondaEngine, 'Red');
 
-  
   print('Car Information:');
   hondaCivic.displayCarInfo();
   hondaCivic.run();
 
-  print('\nHonda Information:');
+  print('\nMy Honda Information:');
   myHonda.displayCarInfo();
   myHonda.run();
 }
