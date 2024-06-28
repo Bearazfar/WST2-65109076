@@ -23,7 +23,7 @@ class Engine {
   set speed(int value) => _speed = value;
 
   void displayEngineInfo() {
-    print('Engine: $_model \nMax Speed: $_speed km/h');
+    print('Engine model: $_model \nMax Speed: $_speed km/h');
   }
 }
 
@@ -85,7 +85,7 @@ class Honda extends Car {
 void main() {
   Person suchakree = Person('Suchakree Longji');
   Engine hondaEngine = Engine('Hybid', 190);
-  Car hondaCivic = Car('Honda', 'Civic', suchakree, hondaEngine);
+  Car hondaCivic = Car('Honda', 'Accord', suchakree, hondaEngine);
   Honda myHonda = Honda('Honda', 'Accord', suchakree, hondaEngine, 'Red');
 
   print('Car Information:');
@@ -96,4 +96,3 @@ void main() {
   myHonda.displayCarInfo();
   myHonda.run();
 }
-
